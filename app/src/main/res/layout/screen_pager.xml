@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="uz.gita.finalexam.ui.screens.pager.PagerScreen">
+    
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/pager"
+        />
+
+    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+        android:id="@+id/dots_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:dotsColor="#D1D1D1"
+        app:dotsCornerRadius="8dp"
+        app:dotsSize="12dp"
+        app:dotsSpacing="4dp"
+        app:dotsWidthFactor="2.5"
+        app:selectedDotColor="#286DFD"
+        app:progressMode="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.84"
+        android:elevation="2dp"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#286DFD"
+        android:text="Next"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

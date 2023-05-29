@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/splashScreen1">
+
+    <fragment
+        android:id="@+id/splashScreen1"
+        android:name="uz.gita.finalexam.ui.screens.splash1.SplashScreen1"
+        android:label="screen_splash"
+        tools:layout="@layout/screen_splash" >
+        <action
+            android:id="@+id/action_splashScreen1_to_splashScreen2"
+            app:destination="@id/splashScreen2"
+            app:popUpTo="@id/splashScreen1"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashScreen2"
+        android:name="uz.gita.finalexam.ui.screens.splash2.SplashScreen2"
+        android:label="screen_splash2"
+        tools:layout="@layout/screen_splash2" >
+        <action
+            android:id="@+id/action_splashScreen2_to_pagerScreen"
+            app:destination="@id/pagerScreen"
+            app:popUpTo="@id/splashScreen2"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashScreen2_to_enterSignScreen"
+            app:destination="@id/enterSignScreen"
+            app:popUpTo="@id/splashScreen2"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashScreen2_to_mainScreen"
+            app:destination="@id/mainScreen"
+            app:popUpTo="@id/splashScreen2"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/pagerScreen"
+        android:name="uz.gita.finalexam.ui.screens.pager.PagerScreen"
+        android:label="screen_pager"
+        tools:layout="@layout/screen_pager" >
+        <action
+            android:id="@+id/action_pagerScreen_to_enterSignScreen"
+            app:destination="@id/enterSignScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/enterSignScreen"
+        android:name="uz.gita.finalexam.ui.screens.entersign.EnterSignScreen"
+        android:label="sign_in_enter"
+        tools:layout="@layout/sign_in_enter" >
+        <action
+            android:id="@+id/action_enterSignScreen_to_signInScreen"
+            app:destination="@id/signInScreen" />
+        <action
+            android:id="@+id/action_enterSignScreen_to_signUpScreen"
+            app:destination="@id/signUpScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInScreen"
+        android:name="uz.gita.finalexam.ui.screens.signin.SignInScreen"
+        android:label="sign_in_screen"
+        tools:layout="@layout/sign_in_screen" >
+        <action
+            android:id="@+id/action_signInScreen_to_mainScreen"
+            app:destination="@id/mainScreen"
+            app:popUpTo="@id/signInScreen"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_signInScreen_to_signUpScreen"
+            app:destination="@id/signUpScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpScreen"
+        android:name="uz.gita.finalexam.ui.screens.signup.SignUpScreen"
+        android:label="sign_up_screen"
+        tools:layout="@layout/sign_up_screen" >
+        <action
+            android:id="@+id/action_signUpScreen_to_mainScreen"
+            app:destination="@id/mainScreen"
+            app:popUpTo="@id/signUpScreen"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_signUpScreen_to_signInScreen"
+            app:destination="@id/signInScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainScreen"
+        android:name="uz.gita.finalexam.ui.screens.main.MainScreen"
+        android:label="screen_main"
+        tools:layout="@layout/screen_main" />
+    <fragment
+        android:id="@+id/homeScreen"
+        android:name="uz.gita.finalexam.ui.screens.main.home.HomeScreen"
+        android:label="screen_home"
+        tools:layout="@layout/screen_home" />
+</navigation>

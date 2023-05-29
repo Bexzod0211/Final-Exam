@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="uz.gita.finalexam.ui.screens.signup.SignUpScreen">
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/icon_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@drawable/img_sign2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnBack" />
+
+    <TextView
+        android:id="@+id/txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Create New Account"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img" />
+
+    <LinearLayout
+        android:id="@+id/containerEmail"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginHorizontal="26dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_edit_text"
+        app:layout_constraintTop_toBottomOf="@id/txt">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="14dp"
+            android:src="@drawable/ic_email" />
+
+        <EditText
+            android:id="@+id/input_email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_input"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/containerPassword"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginHorizontal="26dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_edit_text"
+        app:layout_constraintTop_toBottomOf="@id/containerEmail">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="14dp"
+            android:src="@drawable/ic_lock" />
+
+        <EditText
+            android:id="@+id/input_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_input"
+            android:drawableEnd="@drawable/baseline_remove_red_eye_24"
+            android:hint="Password"
+            android:inputType="numberPassword"
+            android:padding="10dp" />
+    </LinearLayout>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/remember"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:buttonTint="#286DFD"
+        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/containerPassword" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Remember me"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/remember"
+        app:layout_constraintStart_toEndOf="@id/remember"
+        app:layout_constraintTop_toTopOf="@id/remember" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_sign_up"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_sign_btn"
+        android:enabled="false"
+        android:text="Sign up"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/remember" />
+
+    <TextView
+        android:id="@+id/txtOr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="or continue with"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_sign_up" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginHorizontal="80dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/txtOr">
+
+        <FrameLayout
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@drawable/bg_sign_google"
+            tools:ignore="MissingConstraints">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="9dp"
+                android:src="@drawable/ic_facebook" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_sign_google">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="9dp"
+                android:src="@drawable/ic_google" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:background="@drawable/bg_sign_google">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="9dp"
+                android:src="@drawable/ic_apple" />
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/txtbottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="Already have an account?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/btn_sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Sign in"
+        android:textColor="#246BFD"
+        app:layout_constraintBottom_toBottomOf="@id/txtbottom"
+        app:layout_constraintStart_toEndOf="@id/txtbottom"
+        app:layout_constraintTop_toTopOf="@id/txtbottom" />
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="?android:attr/progressBarStyleLarge"
+        android:id="@+id/loading_progress_bar"
+        android:visibility="gone"
+        tools:visibility="visible"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

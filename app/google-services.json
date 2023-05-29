@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "564700262046",
+    "project_id": "doctors-bad25",
+    "storage_bucket": "doctors-bad25.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:564700262046:android:752b181df3512439cf558f",
+        "android_client_info": {
+          "package_name": "uz.gita.finalexam"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJdfz0f_MpzDl70L_TDBXkFwVcpf8C3j0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
